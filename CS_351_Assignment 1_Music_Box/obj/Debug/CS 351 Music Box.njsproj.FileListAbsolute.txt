@@ -1,0 +1,3 @@
+C:\Users\justi\OneDrive\Desktop\CS 351 Music Box\obj\Debug\CS 351 Music Box.njsprojAssemblyReference.cache
+C:\Users\justi\OneDrive\Desktop\CS 351 Music Box\obj\Debug\CS 351 Music Box.njsproj.CoreCompileInputs.cache
+C:\Users\justi\OneDrive\Desktop\CS 351 Music Box\bin\Microsoft.NodejsTools.WebRole.dll

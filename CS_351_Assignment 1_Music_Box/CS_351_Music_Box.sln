@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "CS 351 Music Box", "CS 351 Music Box.njsproj", "{0EBD9FC7-5443-45E8-87FA-D4B293CBF06C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EBD9FC7-5443-45E8-87FA-D4B293CBF06C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EBD9FC7-5443-45E8-87FA-D4B293CBF06C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EBD9FC7-5443-45E8-87FA-D4B293CBF06C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EBD9FC7-5443-45E8-87FA-D4B293CBF06C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2576BBF-77BB-4C18-8861-5BBB4845731D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+{
+  "name": "cs-351-music-box",
+  "version": "0.0.0",
+  "description": "CS 351 Music Box",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}

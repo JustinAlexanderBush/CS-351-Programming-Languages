@@ -1,0 +1,3 @@
+C:\Users\justi\Documents\csHomeworkAndNotes\CS351ProgrammingLanguagesAssignments\CS_351_Assignment 1_Music_Box\obj\Debug\CS_351_Music_Box.njsprojAssemblyReference.cache
+C:\Users\justi\Documents\csHomeworkAndNotes\CS351ProgrammingLanguagesAssignments\CS_351_Assignment 1_Music_Box\obj\Debug\CS_351_Music_Box.njsproj.CoreCompileInputs.cache
+C:\Users\justi\Documents\csHomeworkAndNotes\CS351ProgrammingLanguagesAssignments\CS_351_Assignment 1_Music_Box\bin\Microsoft.NodejsTools.WebRole.dll

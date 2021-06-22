@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+    </script>
+</head>
+
+
+<!--body style="background-color: black"-->
+<body>
+    <h1>[REDACTED] Music Box</h1>
+
+    <textarea id="input_notes" rows="4" cols="4">
+    A
+     B
+      C
+       D
+    </textarea>
+
+    <p>
+    <img src="log-inPic.gif" style="width: 60%; height: 60%;">
+    </p>
+
+    <textarea id="compiled_code" rows="4" cols="20">
+        </textarea>
+
+    <button type="button" onclick="play()">Play</button>
+
+    <script>
+        function play() {
+            //this is where your naration begins...
+            notes_raw = $("#input_notes").val().split(/\r?\n/);
+
+            var notes_parsed = [];
+
+            //for loop to go through each note
+            for (index = 0; index < notes_raw.length; index++) {
+                console.log(notes_raw[index])
+                notes_raw[index] = notes_raw[index].trim()
+                //console.log(notes_raw[index])
+                if (notes_raw[index] == 'A') {
+                    console.log("A");
+                    notes_parsed.push('A');
+                }
+                else if (notes_raw[index] == 'B') {
+                    console.log("B");
+                    notes_parsed.push('B');
+                }
+                else if (notes_raw[index] == 'C') {
+                    console.log("C");
+                    notes_parsed.push('C');
+                }
+                else if (notes_raw[index] == 'D') {
+                    console.log("D");
+                    notes_parsed.push('D');
+                }
+            } //end of for loop
+
+            timing = 0;
+            index_0_offset = 10000; //miliseconds, the time between each sound playing   **Set this for each if and else-if statement
+            index_1_offset = 10000;
+            index_2_offset = 10000;
+            index_3_offset = 5000;
+
+            //for loop to go through each audio file
+
+            note_to_play = null;
+
+            console.log(notes_parsed);
+            for (index = 0; index < notes_parsed.length; index++) {
+                console.log(notes_parsed);
+                if (notes_parsed[index] == 'A') {
+                    setTimeout(function () {
+                        console.log(111);
+                        note_to_play = new Audio('Elevator.mp3')
+                        note_to_play.play()
+                    }, index_0_offset * index) //I recently changed this. 
+                }
+                else if (notes_parsed[index] == 'B') {
+                    setTimeout(function () {
+                        console.log(111);
+                        new Audio('Announcement-Uncalculatable.mp3').play()
+                    }, index_1_offset * index)
+                }
+                else if (notes_parsed[index] == 'C') {
+                    setTimeout(function () {
+                        console.log(111);
+                        note_to_play = new Audio('Announcement-Cautious.mp3')
+                        note_to_play.play()
+                    }, index_2_offset = 500 * index)
+                }
+                else if (notes_parsed[index] == 'D') {
+                    setTimeout(function () {
+                        console.log(111);
+                        note_to_play = new Audio('Music.mp3')
+                        note_to_play.play()
+                    }, index_3_offset * index)
+                }
+            } //end of for loop
+        
+
+            var htmlTEMPLATE = "<!doctype html>"
+            htmlTEMPLATE = htmlTEMPLATE + "<html><head><\/head><body>"
+            htmlTEMPLATE = htmlTEMPLATE + "<script>@@@PLAY_CODE<\/script>"
+            htmlTEMPLATE = htmlTEMPLATE + "<\/body><\/html>"
+
+            //This outputs the code in the little window
+            code_output = "";
+            timing = 0;
+            index_0_offset = 10000; //miliseconds, the time between each sound playing
+            index_1_offset = 10000;
+            index_2_offset = 10000;
+            index_3_offset = 5000;
+
+            for (index = 0; index < notes_parsed.length; index++) {
+                if (notes_parsed[index] == 'A') {
+                    code_output = code_output + "setTimeout(function () {"
+                    code_output = code_output + "new Audio('Elevator.mp3').play()"
+                    code_output = code_output + "}," + index_0_offset + "*" + index + ");"
+                }
+                else if (notes_parsed[index] == 'B') {
+                    code_output = code_output + "setTimeout(function () {"
+                    code_output = code_output + "new Audio('Announcement-Uncalculatable.mp3').play()"
+                    code_output = code_output + "}," + index_1_offset + "*" + index + ");"
+                }
+                else if (notes_parsed[index] == 'C') {
+                    code_output = code_output + "setTimeout(function () {"
+                    code_output = code_output + "new Audio('Announcement-Cautious.mp3').play()"
+                    code_output = code_output + "}," + index_2_offset + "*" + index + ");"
+                }
+                else if (notes_parsed[index] == 'D') {
+                    code_output = code_output + "setTimeout(function () {"
+                    code_output = code_output + "new Audio('Music.mp3').play()"       //add another audio file here later
+                    code_output = code_output + "}," + index_3_offset + "*" + index + ");"
+                }
+
+            } //end of for loop
+
+            $("#compiled_code").val(htmlTEMPLATE.replace("@@@PLAY_CODE", code_output))
+        }//end of play function
+
+    </script>
+
+</body>
+</html>
